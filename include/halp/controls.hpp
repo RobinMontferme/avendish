@@ -704,7 +704,8 @@ struct soundfile_port
   }
 
   soundfile_view<T> soundfile;
-  static constexpr auto filters(){return "*.wav *.aif *.aiff *.flac *.ogg* .mp3 *.ape *.wv *.m4a *.wma *.w64";}
+  static constexpr auto filters() { enum { sound } s; return s; }
+
 };
 
 }
